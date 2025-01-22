@@ -104,3 +104,4 @@ python eval.py --model Qwen/QwQ-32B-Preview --evals=AIME,MATH500,GPQADiamond --t
 ```
     
 Example result: `{"AIME": <aime_accuracy>, "MATH500": <math500_accuracy>, "GPQADiamond": <gpqa_diamond_accuracy>}` 
+gpu --large-mem --num-gpus 2 "python skythought/tools/inference_and_check.py --dataset APPS --model deepseek-reasoner --tp 2 --max_tokens 8192 --split test --source all --end 2 --result-dir ./data --inference"
