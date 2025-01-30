@@ -1,0 +1,44 @@
+
+Running eval: AIME with command ['python', 'inference_and_check.py', '--model', 'deepseek-reasoner', '--dataset', 'AIME', '--split', 'train', '--max_tokens', '8192', '--tp', '2', '--temperatures', '0.7']
+WARNING 01-23 02:22:12 cuda.py:69] Detected different devices in the system: 
+WARNING 01-23 02:22:12 cuda.py:69] Quadro RTX 6000
+WARNING 01-23 02:22:12 cuda.py:69] Quadro RTX 8000
+WARNING 01-23 02:22:12 cuda.py:69] Quadro RTX 6000
+WARNING 01-23 02:22:12 cuda.py:69] Quadro RTX 6000
+WARNING 01-23 02:22:12 cuda.py:69] Quadro RTX 6000
+WARNING 01-23 02:22:12 cuda.py:69] Quadro RTX 8000
+WARNING 01-23 02:22:12 cuda.py:69] Quadro RTX 6000
+WARNING 01-23 02:22:12 cuda.py:69] Quadro RTX 6000
+WARNING 01-23 02:22:12 cuda.py:69] Quadro RTX 6000
+WARNING 01-23 02:22:12 cuda.py:69] Quadro RTX 6000
+WARNING 01-23 02:22:12 cuda.py:69] Please make sure to set `CUDA_DEVICE_ORDER=PCI_BUS_ID` to avoid unexpected behavior.
+Temperature: [0.7]
+Loaded 0 existing results.
+
+Processing Generations:   0%|          | 0/30 [00:00<?, ?it/s]
+Processing Generations: 100%|██████████| 30/30 [00:00<00:00, 33017.35it/s]
+Final acc: 23/30
+{"acc": 0.7667}
+Token usage saved to ./token_usage/deepseek-reasoner_AIME_train_None_0_-1.json
+
+Running eval: GPQADiamond with command ['python', 'inference_and_check.py', '--model', 'deepseek-reasoner', '--dataset', 'GPQADiamond', '--split', 'train', '--max_tokens', '8192', '--tp', '2', '--temperatures', '0.7']
+WARNING 01-23 02:34:47 cuda.py:69] Detected different devices in the system: 
+WARNING 01-23 02:34:47 cuda.py:69] Quadro RTX 6000
+WARNING 01-23 02:34:47 cuda.py:69] Quadro RTX 8000
+WARNING 01-23 02:34:47 cuda.py:69] Quadro RTX 6000
+WARNING 01-23 02:34:47 cuda.py:69] Quadro RTX 6000
+WARNING 01-23 02:34:47 cuda.py:69] Quadro RTX 6000
+WARNING 01-23 02:34:47 cuda.py:69] Quadro RTX 8000
+WARNING 01-23 02:34:47 cuda.py:69] Quadro RTX 6000
+WARNING 01-23 02:34:47 cuda.py:69] Quadro RTX 6000
+WARNING 01-23 02:34:47 cuda.py:69] Quadro RTX 6000
+WARNING 01-23 02:34:47 cuda.py:69] Quadro RTX 6000
+WARNING 01-23 02:34:47 cuda.py:69] Please make sure to set `CUDA_DEVICE_ORDER=PCI_BUS_ID` to avoid unexpected behavior.
+Temperature: [0.7]
+Loaded 0 existing results.
+
+Processing Generations:   0%|          | 0/198 [00:00<?, ?it/s]
+Processing Generations: 100%|██████████| 198/198 [00:00<00:00, 3540.33it/s]
+Final acc: 144/198
+{"acc": 0.7273}
+Token usage saved to ./token_usage/deepseek-reasoner_GPQADiamond_train_None_0_-1.json

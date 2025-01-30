@@ -1,0 +1,8 @@
+
+Running eval: AIME with command ['python', 'inference_and_check.py', '--model', 'deepseek-reasoner', '--dataset', 'AIME', '--split', 'train', '--tp', '2', '--temperatures', '0.7']
+python: can't open file '/home/jiayipan/stephenxie/SkyThought/inference_and_check.py': [Errno 2] No such file or directory
+Error occurred while running eval AIME: Command '['python', 'inference_and_check.py', '--model', 'deepseek-reasoner', '--dataset', 'AIME', '--split', 'train', '--tp', '2', '--temperatures', '0.7']' returned non-zero exit status 2.
+
+Running eval: GPQADiamond with command ['python', 'inference_and_check.py', '--model', 'deepseek-reasoner', '--dataset', 'GPQADiamond', '--split', 'train', '--tp', '2', '--temperatures', '0.7']
+python: can't open file '/home/jiayipan/stephenxie/SkyThought/inference_and_check.py': [Errno 2] No such file or directory
+Error occurred while running eval GPQADiamond: Command '['python', 'inference_and_check.py', '--model', 'deepseek-reasoner', '--dataset', 'GPQADiamond', '--split', 'train', '--tp', '2', '--temperatures', '0.7']' returned non-zero exit status 2.

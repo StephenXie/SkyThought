@@ -105,4 +105,10 @@ python eval.py --model Qwen/QwQ-32B-Preview --evals=AIME,MATH500,GPQADiamond --t
     
 Example result: `{"AIME": <aime_accuracy>, "MATH500": <math500_accuracy>, "GPQADiamond": <gpqa_diamond_accuracy>}` 
 gpu --large-mem --num-gpus 2 "python skythought/tools/inference_and_check.py --dataset APPS --model deepseek-reasoner --tp 2 --max_tokens 8192 --split test --source all --end 50 --result-dir ./data --inference"
-gpu --large-mem --num-gpus 1 "python skythought/tools/inference_and_check.py --dataset APPS --model Qwen/QwQ-32B-Preview --tp 1 --max_tokens 8192 --split test --source all --end 50 --result-dir ./data --inference"
+gpu --large-mem --num-gpus 2 "python skythought/tools/inference_and_check.py --dataset APPS --model Qwen/QwQ-32B-Preview --tp 2 --max_tokens 8192 --split test --source all --end 50 --result-dir ./data --inference"
+gpu --large-mem --num-gpus 2 "python skythought/tools/inference_and_check.py --dataset APPS --model deepseek-reasoner --tp 2 --max_tokens 8192 --split test --source all --end 50 --result-dir ./data --check"
+
+gpu --large-mem --num-gpus 2 "python skythought/tools/inference_and_check.py --dataset NUMINA --model deepseek-reasoner --tp 2 --max_tokens 8192 --split train --source amc_aime --end 50 --filter-difficulty --math-difficulty-lower-bound 1 --math-difficulty-upper-bound 9 --result-dir ./data --inference"
+gpu --large-mem --num-gpus 2 "python skythought/tools/inference_and_check.py --dataset NUMINA --model deepseek-reasoner --tp 2 --max_tokens 8192 --split train --source amc_aime --end 50 --filter-difficulty --math-difficulty-lower-bound 1 --math-difficulty-upper-bound 9 --result-dir ./data --check"
+
+gpu --large-mem --num-gpus 2 "python eval.py --model deepseek-reasoner --evals=AIME,GPQADiamond --tp=2 --output_file=results.txt --temperatures 0.7"
